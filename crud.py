@@ -8,10 +8,8 @@ def create_user(username):
 
     user = User(username=username)
 
-    db.session.add(user)
-    db.session.commit()
-
     return user
+
 
 def get_user_by_username(username):
     """Return a user by username."""
@@ -24,10 +22,8 @@ def create_appointment(date, start_time, end_time, user_id):
 
     appointment = Appointment(date=date, start_time=start_time, end_time=end_time, user_id=user_id)
 
-    db.session.add(appointment)
-    db.session.commit()
-
     return appointment
+    
 
 def get_appointment_by_user(user_id):
     """Return user's appointments"""
